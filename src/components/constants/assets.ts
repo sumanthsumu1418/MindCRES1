@@ -1,25 +1,29 @@
-import Logo from "../../assets/Home/logo.svg";
-import Client from '../../assets/AboutUs/icons/Client Icon.svg'
-import Clock from '../../assets/AboutUs/icons/Clock Icon.svg'
-import Expertise from '../../assets/AboutUs/icons/Expertise Icon.svg'
-import Money from '../../assets/AboutUs/icons/Money Icon.svg'
-import Quality from '../../assets/AboutUs/icons/Quality Icon.svg'
-import Support from '../../assets/AboutUs/icons/Support Icon.svg'
-import Linkedin from '../../assets/AboutUs/icons/LinkedIN.svg'
-import Connect_bg from '../../assets/AboutUs/images/Image.jpg'
-import Service_bg from '../../assets/AboutUs/images/our_service_bg.png'
+import logo from "../../assets/Home/logo.svg";
+import clientIcon from "../../assets/AboutUs/icons/Client Icon.svg";
+import clockIcon from "../../assets/AboutUs/icons/Clock Icon.svg";
+import expertiseIcon from "../../assets/AboutUs/icons/Expertise Icon.svg";
+import moneyIcon from "../../assets/AboutUs/icons/Money Icon.svg";
+import qualityIcon from "../../assets/AboutUs/icons/Quality Icon.svg";
+import supportIcon from "../../assets/AboutUs/icons/Support Icon.svg";
+import linkedinIcon from "../../assets/AboutUs/icons/LinkedIN.svg";
 
-export const Icons = {
-  Logo,
-  Client,
-  Clock,
-  Expertise,
-  Money,
-  Quality,
-  Support,
-  Linkedin,
+import connectBgImage from "../../assets/AboutUs/images/Image.jpg";
+import serviceBgImage from "../../assets/AboutUs/images/our_service_bg.png";
+
+const icons = {
+  logo,
+  clientIcon,
+  clockIcon,
+  expertiseIcon,
+  moneyIcon,
+  qualityIcon,
+  supportIcon,
+  linkedinIcon,
 };
-export const BGImage = {
-  Connect_bg,
-  Service_bg
+
+const bgImages = {
+  connectBgImage,
+  serviceBgImage,
 };
+
+export { icons, bgImages };
