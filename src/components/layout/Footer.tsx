@@ -3,14 +3,12 @@ import { icons } from "../constants/assets";
 const Footer: React.FC = () => {
   return (
     <footer>
-      <div className="flex flex-row justify-between">
-        <div>
-          <h3 className="text-secondary font-[31px]">
-            From concept to code,let's bring a your code to life
-          </h3>
-        </div>
+      <div className="flex flex-row items-center justify-between bg-primary">
+        <h3 className="text-secondary text-center font-[31px]">
+          From concept to code,let's bring your code to life.
+        </h3>
 
-        <img src={icons.logo} alt="Logo" />
+        <img src={icons.footer_logo} alt="footerLogo" />
       </div>
     </footer>
   );
