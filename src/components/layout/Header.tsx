@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="flex items-center justify-between p-4">
+      <nav className="flex container items-center justify-between p-4">
         <img className="h-8 mr-4" src={icons.logo} alt="Logo" />
 
         <div className="flex items-center space-x-4 w-1/3 justify-between">
@@ -17,7 +17,7 @@ const Header = () => {
           <a href="/about" className="text-primary">Services</a>
 
           <a href="/contact">
-            <Button className="button_no_hover" onClick={handleClick}>
+            <Button className="button_hover" onClick={handleClick}>
               Contact Us
             </Button>
           </a>

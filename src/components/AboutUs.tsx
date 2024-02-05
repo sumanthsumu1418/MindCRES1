@@ -2,8 +2,8 @@ import React from "react";
 import { bgImages } from "./constants/assets";
 const AboutUs = () => {
   return (
-    <>
-      <div className=" my-3">
+    <div className="container">
+      <div className="  my-3">
         <h1 className="bg-secondary text-primary w-[200px] text-center">
           About Us
         </h1>
@@ -23,7 +23,7 @@ const AboutUs = () => {
         </p>
         <img className="h-8 mr-4 bg-cover" src={bgImages.aboutImage} alt="about" />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -75,7 +75,7 @@ import { bgImages } from "./constants/assets";
 const Services = () => {
   return (
     <div
-      className="m-6 h-[90vh] hidden flex flex-row flex-wrap"
+      className="m-6 h-[90vh]  flex flex-row flex-wrap"
       style={{ backgroundImage: `url(${bgImages.serviceBgImage})` }}
     >
       <h1 className="text-secondary p-6">
