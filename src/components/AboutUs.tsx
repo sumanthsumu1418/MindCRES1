@@ -62,10 +62,10 @@ const AboutUs = () => {
         </p>
 
         <img
-          className="h-72 w-full sm:w-1/2 bg-center bg-no-repeat relative bg-cover mb-6 sm:mb-0"
-          src={bgImages.aboutImage}
-          alt="about"
-        />
+           className="h-8 mr-4 bg-center bg-no-repeat relative h-72 bg-cover"
+           src={bgImages.aboutImage}
+           alt="about"
+         />
       </div>
     </>
   );
