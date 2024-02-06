@@ -10,7 +10,7 @@ import linkedinIcon from "../../assets/AboutUs/icons/LinkedIN.svg";
 
 import hero_bg from "../../assets/AboutUs/images/hero_bg.png";
 import aboutImage from "../../assets/AboutUs/images/aboutImage.jpg";
-import serviceBgImage from "../../assets/AboutUs/images/our_service_bg.png";
+import service_bg from "../../assets/AboutUs/images/service_bg.jpg";
 
 const icons = {
   logo,
@@ -27,7 +27,7 @@ const icons = {
 const bgImages = {
   hero_bg,
   aboutImage,
-  serviceBgImage,
+  service_bg,
 };
 
 export { icons, bgImages };

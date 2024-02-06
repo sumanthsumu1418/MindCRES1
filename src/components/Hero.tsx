@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
 
     <div className="h-[40vh] relative flex flex-col items-center bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: `url(${bgImages.hero_bg})` }}>
   <div className="flex container flex-col justify-evenly items-center sm:flex-row">
-    <div className="flex flex-col ">
+    <div className="flex flex-col">
       <h1 className="text-secondary text-3xl sm:text-5xl line-height font-bold">
         Welcome to
         <br /> Mindcres Technologies

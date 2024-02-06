@@ -8,12 +8,12 @@ import AboutUs from "./components/AboutUs";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Services from "./components/Services";
 import ContactUs from "./components/ContactUs";
-import Navbar from './components/Header'
+
 function App() {
   return (
     <div className="App">
       <Header/>
-      {/* <Navbar /> */}
+     
       <Hero />
       <AboutUs />
       <WhyChooseUs />
