@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <>
       <div className="my-3">
-        <h1 className="bg-secondary text-primary w-1/4 p-3 text-center">
+        <h1 className="bg-secondary font-bold text-[26px] text-primary w-1/3 p-3 text-center">
           About Us
         </h1>
       </div>

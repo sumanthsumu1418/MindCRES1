@@ -13,9 +13,9 @@ const Services: React.FC = () => {
           <ul>
             <div className="lg:flex lg:flex-row justify-evenly">
               <div className="lg:w-1/4 mb-6">
-                <li className="text-secondary font-bold p-6 w-8 list-disc text-3xl text-center lg:text-left">
+                <p className="text-secondary font-bold p-6 w-8  text-3xl text-center lg:text-left">
                   Our Services
-                </li>
+                </p>
               </div>
               <div className="lg:flex lg:flex-col lg:gap-6">
                 <div className="lg:w-[340px] h-[190px] mb-6 lg:mb-0">
