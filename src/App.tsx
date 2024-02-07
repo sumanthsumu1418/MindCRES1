@@ -8,13 +8,16 @@ import AboutUs from "./components/AboutUs";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Services from "./components/Services";
 import ContactUs from "./components/ContactUs";
-
-
-function App() {
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "./Redux/store";
+import { ToastContainer, } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+const App: React.FC = () => {
   return (
-    <>
-     
-      <div className="App">
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+      <ToastContainer />
         <Header />
         <Hero />
         <AboutUs />
@@ -22,10 +25,9 @@ function App() {
         <Services />
         <ContactUs />
         <Footer />
-      </div>
-      
-    </>
+      </PersistGate>
+    </Provider>
   );
-}
+};
 
 export default App;
