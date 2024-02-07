@@ -3,8 +3,8 @@ import { bgImages } from "./constants/assets";
 
 const Services: React.FC = () => {
   return (
-    <div
-      className="pl-4 pt-8 min-h-[650px] bg-cover  bg-center  relative"
+    <div id="services"
+      className="pl-4 pt-8 min-h-[650px] id:#services bg-cover  bg-center  relative"
       style={{ backgroundImage: `url(${bgImages.service_bg})` }}
     >
       <div className="absolute inset-0 filter blur-[17.1px] bg-opacity-50 bg-[#191919] "></div>

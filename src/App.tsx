@@ -9,18 +9,22 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import Services from "./components/Services";
 import ContactUs from "./components/ContactUs";
 
+
 function App() {
   return (
-    <div className="App">
-      <Header/>
+    <>
      
-      <Hero />
-      <AboutUs />
-      <WhyChooseUs />
-      <Services />
-      <ContactUs /> 
-      <Footer />
-    </div>
+      <div className="App">
+        <Header />
+        <Hero />
+        <AboutUs />
+        <WhyChooseUs />
+        <Services />
+        <ContactUs />
+        <Footer />
+      </div>
+      
+    </>
   );
 }
 

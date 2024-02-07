@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
 
   return (
     <div className=" container my-6">
-      <div className="m-3 container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+      <div className="m-3 container grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 gap-4">
         <h1 className="col-span-full font-bold text-4xl py-6 text-center text-secondary">
           Why choose us?
         </h1>

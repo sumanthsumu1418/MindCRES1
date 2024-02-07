@@ -1,14 +1,12 @@
-
-
 import React, { useState } from "react";
 import { icons } from "./constants/assets";
 import Button from "./common/Button/Button";
 
 const ContactUs: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: " ",
+    email: " ",
+    message: " ",
   });
 
   const handleChange = (
@@ -29,9 +27,10 @@ const ContactUs: React.FC = () => {
 
   return (
     <>
-      <div className="my-8">
+      <div id="contact" className="my-8">
         <div className="flex justify-end my-6">
-          <h1 className="bg-secondary text-primary w-2/5 text-center p-4">
+          <span className="bg-secondary h-[70px] flex w-[44%] absolute right-0"></span>
+          <h1 className=" font-bold text-center sm:mr-16 relative z-9 items-center text-center text-[26px] text-primary h-[70px] flex">
             Get in touch
           </h1>
         </div>
@@ -80,12 +79,6 @@ const ContactUs: React.FC = () => {
                   ></textarea>
                 </div>
 
-                {/* <button
-                  type="submit"
-                  className="bg-primary text-white p-2 rounded-lg hover:bg-secondary"
-                >
-                  Submit
-                </button> */}
                 <div className="flex justify-end">
                   <Button className="button_shadow" onClick={handleSubmit}>
                     Submit
@@ -127,7 +120,7 @@ const ContactUs: React.FC = () => {
               </div>
             </div>
           </div> */}
-          <div className="sm:w-full flex flex-col lg:justify-between mx-auto p-6">
+          <div className="sm:w-full flex flex-col  mx-auto p-6">
             <div className="mb-4">
               <span className="text-primary text-[28px] ">Visit</span>
               <span className="text-secondary text-[28px]"> Us</span>
@@ -136,27 +129,29 @@ const ContactUs: React.FC = () => {
                 521137, India.
               </p>
             </div>
-            <div className="mb-4">
-              <span className="text-primary text-[28px]">Email</span>
-              <span className="text-secondary text-[28px]"> Us</span>
-              <p className="text-primary text-[15px]">sample@example.com</p>
-            </div>
-            <div className="mb-4">
-              <span className="text-primary text-[28px]">Call</span>
-              <span className="text-secondary text-[28px]"> Us</span>
-              <p className="text-primary text-[15px]">+ 91 7901054999</p>
-            </div>
-            <div className="mb-4">
-              <span className="text-primary text-[28px]">Follow</span>
-              <span className="text-secondary text-[28px]"> Us</span>
-              <div className="flex">
-                <img src={icons.linkedinIcon} alt="linkedin" />
-                <a
-                  href="https://www.linkedin.com/company/viaticum-in/"
-                  className="text-primary underline text-[15px]"
-                >
-                  LinkedIn
-                </a>
+            <div>
+              <div className="mb-4">
+                <span className="text-primary text-[28px]">Email</span>
+                <span className="text-secondary text-[28px]"> Us</span>
+                <p className="text-primary text-[15px]">sample@example.com</p>
+              </div>
+              <div className="mb-4">
+                <span className="text-primary text-[28px]">Call</span>
+                <span className="text-secondary text-[28px]"> Us</span>
+                <p className="text-primary text-[15px]">+ 91 7901054999</p>
+              </div>
+              <div className="mb-4">
+                <span className="text-primary text-[28px]">Follow</span>
+                <span className="text-secondary text-[28px]"> Us</span>
+                <div className="flex">
+                  <img src={icons.linkedinIcon} alt="linkedin"/>
+                  <a
+                    href="https://www.linkedin.com/company/viaticum-in/"
+                    className="text-primary underline text-[15px]"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
               </div>
             </div>
           </div>
