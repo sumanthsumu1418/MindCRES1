@@ -11,6 +11,7 @@ import linkedinIcon from "../../assets/AboutUs/icons/LinkedIN.svg";
 import hero_bg from "../../assets/AboutUs/images/hero_bg.png";
 import aboutImage from "../../assets/AboutUs/images/aboutImage.jpg";
 import service_bg from "../../assets/AboutUs/images/service_bg.jpg";
+import whychooseus_bg from "../../assets/AboutUs/images/whychooseus_bg.png";
 
 const icons = {
   logo,
@@ -28,6 +29,7 @@ const bgImages = {
   hero_bg,
   aboutImage,
   service_bg,
+  whychooseus_bg
 };
 
 export { icons, bgImages };

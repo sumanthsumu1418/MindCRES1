@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 :root {
   --primary-color: #000000;
   --secondary-color: #fdc103;
@@ -15,21 +17,20 @@
   }
   .button_hover {
     color: var(--secondary-color);
-    background: var(--primary-color);
+    background-color: var(--primary-color) !important;
     &:hover {
-      background-color: var(--secondary-color);
+      background-color: var(--secondary-color) !important;
       color: var(--primary-color);
       color: #000;
       box-shadow: 0 8px 4px rgba(1, 1, 0, 0.2);
-
     }
   }
   .button_no_hover {
-    background: var(--secondary-color);
+    background-color: var(--secondary-color) !important;
     color: var(--primary-color);
   }
   .button_shadow {
-    background: var(--secondary-color);
+    background-color: var(--secondary-color) !important;
     color: var(--primary-color);
     &:hover {
       box-shadow: 0 8px 4px rgba(1, 1, 0, 0.2);
@@ -37,32 +38,28 @@
   }
   .text-primary {
     color: var(--primary-color);
-    
   }
 
   .bg-primary {
-    background: var(--primary-color);
+    background-color: var(--primary-color);
   }
   .text-secondary {
     color: var(--secondary-color);
-    
   }
-.bg-secondary {
-    background: var(--secondary-color);
+  .bg-secondary {
+    background-color: var(--secondary-color);
   }
   .text-icongold {
     color: var(--icongold-color);
-    
   }
   .bg-icongold {
-    background: var(--icongold-color);
+    background-color: var(--icongold-color);
   }
   .text-white {
     color: var(--white-color);
-   
   }
   .bg-white {
-    background: var(--white-color);
+    background-color: var(--white-color);
   }
   .container {
     max-width: 3824px;
@@ -70,4 +67,9 @@
     margin: auto;
     overflow: hidden;
   }
+}
+
+/* Add Montserrat font to the body */
+body {
+  font-family: 'Montserrat', sans-serif;
 }

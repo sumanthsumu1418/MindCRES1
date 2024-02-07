@@ -6,15 +6,15 @@ const AboutUs = () => {
   return (
     <>
       <div id="about" className="container">
-        <div className="my-7 id ">
-          <span className="bg-secondary h-[70px] w-[34%] absolute left-0"></span>
-          <h1 className=" font-bold relative z-9  text-[26px] text-primary h-[70px] flex items-center   text-left">
+        <div className="mt-24 id  ">
+          <span className="bg-secondary  h-[70px] w-[34%] absolute left-0"></span>
+          <h1 className=" font-medium relative z-9  text-[39px] text-primary h-[70px] flex items-center text-left">
             About Us
           </h1>
         </div>
 
-        <div className="flex   flex-col items-center sm:flex-row justify-between ">
-          <p className="w-full sm:w-3/5   pt-12 sm:text-left">
+        <div className="flex mx-auto w-[90%] pb-[1%] flex-col  items-center sm:flex-row justify-between ">
+          <p className="w-full sm:w-3/5 xl:text-[20px] pt-12 sm:text-left">
             At Mindcres Technologies, we are a leading provider of professional
             software development services. With 5+ years of experience in the
             industry, we have established ourselves as a reliable and trusted
@@ -29,7 +29,7 @@ const AboutUs = () => {
           </p>
 
           <img
-            className="h-8 mr-4 bg-center bg-no-repeat relative h-72 bg-cover"
+            className="h-[392px] mr-4 bg-center bg-no-repeat relative  bg-cover"
             src={bgImages.aboutImage}
             alt="about"
           />

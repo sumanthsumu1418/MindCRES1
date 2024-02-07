@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`px-4 sm:px-6 h-10 sm:h-[38px] border:none outline:none rounded-full cursor-pointer ${className}`}
+      className={`lg:px-[2.4rem] sm:px-6  lg:h-[48px] text-[20px] sm:h-[38px]  border:none outline:none rounded-full cursor-pointer ${className}`}
       onClick={onClick}
       disabled={disabled}
       type={type}

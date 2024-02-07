@@ -17,11 +17,11 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed pl-20 top-0 w-[100%] p-4 bg-white z-[99]">
-      <nav className="flex container items-center justify-between">
+    <header className="fixed top-0 w-[100%] h-[182px] relative flex items-center bg-white z-[99]">
+      <nav className="flex container h-[100%] items-center justify-between">
         <div className="">
           <a href="/">
-            <img className="h-8 mr-4" src={icons.logo} alt="Logo" />
+            <img className="h-[50px] mr-4" src={icons.logo} alt="Logo" />
           </a>
         </div>
 
@@ -36,15 +36,15 @@ const Header = () => {
         </div>
 
         {/* Navigation items for larger screens */}
-        <div className="hidden md:flex lg:flex lg:justify-evenly top-0 items-center space-x-4 w-2/3">
-          <a href="#about" className="text-primary">
+        <div className="hidden md:flex lg:flex lg:justify-between w-[35%] top-0 items-center space-x-4 w-2/3">
+          <a href="#about" className="text-primary text-[25px]">
             About
           </a>
-          <a href="#services" className="text-primary">
+          <a href="#services" className="text-primary text-[25px]">
             Services
           </a>
           <a href="#contact">
-            <Button className="button_hover" onClick={handleClick}>
+            <Button className="button_hover bg-primary" onClick={handleClick}>
               Contact Us
             </Button>
           </a>
