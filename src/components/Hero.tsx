@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   return (
     <>
       <div
-        className="h-[500px]  relative flex  flex-col items-center bg-cover bg-center bg-no-repeat relative"
+        className="h-[500px] mt-[182px]  relative flex  flex-col items-center bg-cover bg-center bg-no-repeat relative"
         style={{ backgroundImage: `url(${bgImages.hero_bg})` }}
       >
         <div className="flex container h-[100%] mx-auto w-[44%] lg:flex-col justify-evenly items-start sm:flex-row">

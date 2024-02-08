@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-[100%] h-[182px] relative flex items-center bg-white z-[99]">
+    <header className="fixed top-0 w-[100%] h-[182px] flex items-center bg-white z-[99]">
       <nav className="flex container h-[100%] items-center justify-between">
         <div className="">
           <a href="/">
@@ -36,7 +36,7 @@ const Header = () => {
         </div>
 
         {/* Navigation items for larger screens */}
-        <div className="hidden md:flex lg:flex lg:justify-between w-[35%] top-0 items-center space-x-4 w-2/3">
+        <div className="hidden md:flex lg:flex lg:justify-between w-[40%] top-0 items-center space-x-4 ">
           <a href="#about" className="text-primary text-[25px]">
             About
           </a>

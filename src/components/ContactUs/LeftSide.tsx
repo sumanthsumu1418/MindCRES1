@@ -55,16 +55,16 @@ const LeftSide: React.FC = () => {
   };
 
   return (
-    <div className="sm:w-full pt-4 flex flex-col">
-      <p className="text-icongold pb-4 w-4/5">
+    <div className=" pt-4 flex w-[110%] flex-col">
+      <p className="text-icongold text-[25px]  pb-4 ">
         Contact us today to discuss your digital transformation goals and let us
         help you grow your business.
       </p>
 
-      <div className="max-w-md bg-white">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="mb-4">
-            <label htmlFor="name">Name</label>
+      <div className="max-w-md mt-8 bg-white">
+        <form onSubmit={handleSubmit(onSubmit)} className="w-[170%]">
+          <div className="mb-8 ">
+            {/* <label htmlFor="name">Name</label> */}
             <Controller
               render={({ field }) => (
                 <input
@@ -72,7 +72,7 @@ const LeftSide: React.FC = () => {
                   id="name"
                   placeholder="Name"
                   {...field}
-                  className={`mt-1 px-6 py-2 w-full border rounded-2xl ${
+                  className={`mt-1 px-6 text-[25px] border-[3px] border-[#B0B0B0] h-[60px] py-2 w-full rounded-full ${
                     errors.name && "border-red-500"
                   }`}
                 />
@@ -83,8 +83,8 @@ const LeftSide: React.FC = () => {
             />
           </div>
 
-          <div className="mb-4">
-            <label htmlFor="email">Email Address</label>
+          <div className="mb-8">
+            {/* <label htmlFor="email">Email Address</label> */}
             <Controller
               render={({ field }) => (
                 <input
@@ -92,7 +92,7 @@ const LeftSide: React.FC = () => {
                   id="email"
                   placeholder="Email Address"
                   {...field}
-                  className={`mt-1 py-2 px-6 w-full border rounded-2xl ${
+                  className={`mt-1 py-2 px-6 text-[25px] w-full h-[60px] border-[3px] border-[#B0B0B0] rounded-full ${
                     errors.email && "border-red-500"
                   }`}
                 />
@@ -106,8 +106,8 @@ const LeftSide: React.FC = () => {
             />
           </div>
 
-          <div className="mb-4">
-            <label htmlFor="message">Message</label>
+          <div className="mb-8">
+            {/* <label htmlFor="message">Message</label> */}
             <Controller
               render={({ field }) => (
                 <textarea
@@ -115,7 +115,7 @@ const LeftSide: React.FC = () => {
                   placeholder="Message"
                   {...field}
                   rows={4}
-                  className={`mt-1 py-2 px-6 w-full border rounded-4xl ${
+                  className={`mt-1 py-2 px-6 text-[25px] border-[3px] border-[#B0B0B0] h-[276px] w-full resize-none rounded-xl ${
                     errors.message && "border-red-500"
                   }`}
                 ></textarea>
