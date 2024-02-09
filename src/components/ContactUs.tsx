@@ -1,21 +1,186 @@
-import React from "react";
-import LeftSide from "./ContactUs/LeftSide";
-import RightSide from "./ContactUs/RightSide";
+import React, { useState } from "react";
+import { icons } from "./constants/assets";
+const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-const ContactUs: React.FC = () => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // You can handle form submission logic here
+    console.log("Form submitted:", formData);
+  };
+
   return (
-    <div id="contact" className="my-8 container">
-      <div className="mt-12 md:mt-24 lg:mt-24 id flex flex-col-reverse items-end  ">
-        <span className="bg-secondary  h-[70px] w-[56%] md:w-[34%] lg:w-[34%] absolute right-0"></span>
-        <h1 className=" font-medium relative z-9 text-[31px] md:text-[39px]  lg:text-[39px] text-primary h-[70px] flex items-center text-left">
+    <>
+<<<<<<< Updated upstream
+      <div className="">
+        <div className="flex justify-end my-6">
+          <h1 className="bg-secondary text-primary w-2/5 text-center p-4">
+            Get in touch
+          </h1>
+=======
+      <div className="flex justify-end my-6">
+        <h1 className="bg-secondary text-primary w-2/5 text-center p-4">
           Get in touch
         </h1>
       </div>
-      <div className=" flex  w-[80%] md:w-[100%] lg:w-[100%] my-36 flex-col-reverse md:flex-row lg:flex-row  justify-around">
-        <LeftSide />
-        <RightSide />
+      <div className="flex flex-row justify-around">
+        <div className="w-1/2">
+          <p className="text-icongold">
+            Contact us today to discuss your digital transformation goals and
+            let us help you grow your business.
+          </p>
+          <div className="max-w-md mx-auto p-8 bg-white ">
+            <form onSubmit={handleSubmit}>
+              <div className="mb-4">
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="mt-1 px-6 py-2 w-full border rounded-2xl"
+                  required
+                />
+              </div>
+
+              <div className="mb-4">
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Email Address"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="mt-1 py-2 px-6 w-full border rounded-2xl"
+                  required
+                />
+              </div>
+
+              <div className="mb-4">
+                <textarea
+                  id="message"
+                  placeholder="Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={parseInt("4")}
+                  className="mt-1 py-2 px-6 w-full border rounded-4xl"
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="bg-primary text-white p-2 rounded-lg hover:bg-secondary"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+>>>>>>> Stashed changes
+        </div>
+        <div className="flex container flex-row justify-around">
+          <div className="w-1/2 pt-4 flex  flex-col  ">
+            <p className="text-icongold  pb-4 w-4/5 ">
+              Contact us today to discuss your digital transformation goals and
+              let us help you grow your business.
+            </p>
+            
+            <div className="max-w-md  bg-white ">
+              <form onSubmit={handleSubmit}>
+                <div className="mb-4">
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="mt-1 px-6 py-2 w-full border rounded-2xl"
+                    required
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="mt-1 py-2 px-6 w-full border rounded-2xl"
+                    required
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <textarea
+                    id="message"
+                    placeholder="Message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={parseInt("4")}
+                    className="mt-1 py-2 px-6 w-full border rounded-4xl"
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="bg-primary text-white p-2 rounded-lg hover:bg-secondary"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+          <div className="flex flex-col mx-auto p-6 justify-between">
+            <div>
+              <span className="text-primary">Visit</span>
+              <span className="text-secondary"> Us</span>
+              <p className="text-primary">
+                4-91/1, Penamaluru Vijayawada, Krishna district, Andhra Pradesh,
+                521137, India.
+              </p>
+            </div>
+            <div>
+              <span className="text-primary">Email</span>
+              <span className="text-secondary"> Us</span>
+              <p className="text-primary">sample@example.com</p>
+            </div>
+            <div>
+              <span className="text-primary">Call</span>
+              <span className="text-secondary"> Us</span>
+              <p className="text-primary">+ 91 7901054999</p>
+            </div>
+            <div>
+              <span className="text-primary">Follow</span>
+              <span className="text-secondary"> Us</span>
+              <div className="flex">
+                <img src={icons.linkedinIcon} alt="linkedin" />
+                <a
+                  href="https://www.linkedin.com/company/viaticum-in/"
+                  className="text-primary underline"
+                >
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
