@@ -19,10 +19,10 @@ const WhyChooseUs = () => {
       <h1 className="col-span-full text-[49px] mb-28 font-bold text-4xl text-center text-secondary">
         Why choose us?
       </h1>
-      <div className="m-auto w-[85%] pb-56 container grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 gap-x-16 gap-y-40">
+      <div className="m-auto w-[100%] lg:pb-56 pb-20 container grid grid_sm grid_md grid-cols-3 gap-x-0 gap-y-10 md:gap-x-0 md:gap-y-24  lg:gap-x-16 lg:gap-y-40 ">
         {services.map((service, index) => (
           <div key={index} className="flex flex-col items-center">
-            <span className="rounded-full flex justify-center w-[228px] h-[228px] bg-primary ">
+            <span className="rounded-full flex justify-center lg:w-[228px] lg:h-[228px] w-[190px] h-[190px] bg-primary ">
               <img
                 src={service.icon}
                 alt={service.text.toLowerCase()}

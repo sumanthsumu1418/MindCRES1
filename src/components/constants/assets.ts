@@ -7,6 +7,8 @@ import moneyIcon from "../../assets/AboutUs/icons/Money Icon.svg";
 import qualityIcon from "../../assets/AboutUs/icons/Quality Icon.svg";
 import supportIcon from "../../assets/AboutUs/icons/Support Icon.svg";
 import linkedinIcon from "../../assets/AboutUs/icons/LinkedIN.svg";
+import menuIcon from "../../assets/AboutUs/icons/menu.svg";
+import closeIcon from "../../assets/AboutUs/icons/close.svg";
 
 import hero_bg from "../../assets/AboutUs/images/hero_bg.png";
 import aboutImage from "../../assets/AboutUs/images/aboutImage.jpg";
@@ -23,6 +25,8 @@ const icons = {
   qualityIcon,
   supportIcon,
   linkedinIcon,
+  menuIcon,
+  closeIcon
 };
 
 const bgImages = {

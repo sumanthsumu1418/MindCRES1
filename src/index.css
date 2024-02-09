@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 :root {
   --primary-color: #000000;
@@ -32,12 +32,11 @@
   .button_shadow {
     background-color: var(--secondary-color) !important;
     color: var(--primary-color);
-      box-shadow: 0px 4px 7px rgba(1, 1, 0, 0.1);
-      transition: all 0.5s ease-in;
-      
+    box-shadow: 0px 4px 7px rgba(1, 1, 0, 0.1);
+    transition: all 0.5s ease-in;
+
     &:hover {
       box-shadow: 0px 2px 12px 3px rgba(1, 1, 0, 0.1);
-
     }
   }
   .text-primary {
@@ -65,15 +64,60 @@
   .bg-white {
     background-color: var(--white-color);
   }
+}
+
+.container {
+  max-width: 3824px;
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1700px) {
   .container {
-    max-width: 3824px;
-    width: 95%;
-    margin: auto;
-    overflow: hidden;
+    max-width: 1250px !important;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    max-width: 668px !important;
+  }
+  .about_col {
+    flex-direction: column !important;
+  }
+  .form_md{
+    width: 130% !important;
+  }
+  .grid_md {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .unset_display {
+    text-align: center !important;
+    display: unset !important;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  .container {
+    max-width: 100%!important;
+    margin: 1% !important;
+    
+  }
+  .grid_sm {
+    display: grid !important;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  .about_col {
+    flex-direction: column !important;
+  }
+  
+  .unset_display_sm {
+    text-align: center !important;
+    display: unset !important;
   }
 }
 
 /* Add Montserrat font to the body */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }

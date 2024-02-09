@@ -6,11 +6,11 @@ import { icons } from "../constants/assets";
 const RightSide: React.FC = () => {
   return (
     <>
-      <div className="sm:w-full flex flex-col  ml-[10%] p-6">
+      <div className="sm:w-full flex flex-col ml-0 md:ml-[10%] lg:ml-[10%]  p-6">
         <div className="mb-4">
           <span className="text-primary text-[39px] ">Visit</span>
           <span className="text-secondary text-[39px]"> Us</span>
-          <p className="text-primary w-[80%] text-[20px] pb-6 mt-6">
+          <p className="text-primary w-[100%] md:w-[80%] lg:w-[80%] text-[20px] pb-6 mt-6">
             4-91/1, Penamaluru Vijayawada, Krishna district, Andhra Pradesh,
             521137, India.
           </p>

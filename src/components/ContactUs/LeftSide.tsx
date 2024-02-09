@@ -37,7 +37,7 @@ const LeftSide: React.FC = () => {
 
       dispatch(setFormData(data));
 
-    //   console.log("submitted:", data);
+      //   console.log("submitted:", data);
 
       // Show success toast
       toast.success("Submitted successfully!");
@@ -48,21 +48,24 @@ const LeftSide: React.FC = () => {
         reset();
       }, 500);
     } catch (error) {
-    //   console.error("Error sending email:", error);
+      //   console.error("Error sending email:", error);
       // Show error toast if sending email fails
       toast.error("Error sending email. Please try again.");
     }
   };
 
   return (
-    <div className=" pt-4 flex w-[110%] flex-col">
+    <div className="pt-12 ml-2 md:ml-12 lg:ml-12 md:pt-16 lg:pt-4 flex w-[110%] flex-col">
       <p className="text-icongold text-[25px]  pb-4 ">
         Contact us today to discuss your digital transformation goals and let us
         help you grow your business.
       </p>
 
       <div className="max-w-md mt-8 bg-white">
-        <form onSubmit={handleSubmit(onSubmit)} className="w-[170%]">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="w-[100%] form_md lg:w-[170%]  "
+        >
           <div className="mb-8 ">
             {/* <label htmlFor="name">Name</label> */}
             <Controller
@@ -127,7 +130,7 @@ const LeftSide: React.FC = () => {
           </div>
 
           <div className="flex justify-end">
-            <Button className="button_shadow" type="submit">
+            <Button className="button_shadow " type="submit">
               Submit
             </Button>
           </div>

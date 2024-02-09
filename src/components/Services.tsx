@@ -5,7 +5,7 @@ const Services: React.FC = () => {
   return (
     <div
       id="services"
-      className="pl-4 pt-8 h-[115%] pb-16 id:#services bg-cover  bg-center  relative"
+      className="pl-4 pt-8 h-[115%] pb-16 id:#services bg-cover bg-center  relative"
       style={{ backgroundImage: `url(${bgImages.service_bg})` }}
     >
       <div className="absolute inset-0 filter backdrop-blur-sm  bg-opacity-80 bg-[#191919] "></div>
@@ -13,17 +13,17 @@ const Services: React.FC = () => {
         <div className="container py-16">
           <ul>
             <div className="lg:flex lg:flex-row justify-between">
-              <div className="lg:w-1/4 mb-16">
-                <p className="text-secondary font-bold p-6 w-8  text-[61px] text-center lg:text-left">
+              <div className="lg:w-1/4 relative  mb-16">
+                <p className=" text-secondary font-bold p-6 w-8 md:-w-8 lg:w-8 text-[41px] md:text-[61px] lg:text-[61px] unset_display unset_display_sm  text-center md:text-center lg:text-left">
                   Our Services
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-x-40 gap-y-16">
+              <div className="grid grid_sm grid-cols-2 gap-x-20 gap-y-10 md:gap-x-40 md:gap-y-16 lg:gap-x-40 lg:gap-y-16  ">
                 <div className="lg:w-[340px]  lg:mb-0">
                   <li className="text-secondary lg:h-[165px] list-disc font-bold text-[39px] ">
                     UI/UX Design
                   </li>
-                  <p className="text-[20px]  list-none text-white">
+                  <p className="text-[20px] text-white">
                     Our team of highly skilled designers and developers bring
                     together the art of aesthetics and the science of
                     functionality to ensure your software stands out from the
