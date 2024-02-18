@@ -78,7 +78,7 @@ const Header = ({mindCresContent}:any) => {
           <div className="flex flex-col lg:items-end items-center space-y-2">
             {/* Use dropdown links from JSON */}
             {headerData.navigation.map((item:any, index:any) => (
-              <a key={index} href={item.link} className="text-primary text-[55px]">
+              <a key={index} onClick={handleClick} href={item.link} className="text-primary text-[55px]">
                 {item.label}
               </a>
             ))}
