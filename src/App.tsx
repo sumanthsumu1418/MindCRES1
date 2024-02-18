@@ -35,9 +35,9 @@ console.log(mindCresContent)
         <ToastContainer />
         <Header mindCresContent={mindCresContent} />
         <Hero mindCresContent={mindCresContent} />
-        <AboutUs  mindCresContent={mindCresContent}/>
+        <AboutUs mindCresContent={mindCresContent} />
         <WhyChooseUs mindCresContent={mindCresContent} />
-        <Services />
+        <Services mindCresContent={mindCresContent} />
         <ContactUs mindCresContent={mindCresContent} />
         <Footer mindCresContent={mindCresContent} />
       </PersistGate>

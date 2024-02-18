@@ -2,10 +2,11 @@ import React from "react";
 import { bgImages } from "./constants/assets";
 import jsonData from "../data/data.json";
 
-const Services: React.FC = () => {
+const Services = ({ mindCresContent }: any) => {
+  const services = mindCresContent.services || jsonData.services;
   return (
     <div
-      id="services"
+      id={services.sectionId}
       className="pl-4 pt-8 h-[115%] pb-16 id:#services bg-cover bg-center  relative"
       style={{ backgroundImage: `url(${bgImages.service_bg})` }}
     >
@@ -16,74 +17,58 @@ const Services: React.FC = () => {
             <div className="lg:flex lg:flex-row justify-between">
               <div className="lg:w-1/4 relative mb-12 md:mb-16 lg:mb-16">
                 <p className=" text-secondary font-bold p-0 md:p-6 lg:p-6 w-48 md:-w-24 lg:w-8 text-[41px] md:text-[61px] lg:text-[61px]  unset_display_sm  text-left md:text-center lg:text-left">
-                  Our Services
+                  {services.title}
                 </p>
               </div>
               <div className="grid service_sm grid-cols-2 gap-x-20 gap-y-10 md:gap-x-40 md:gap-y-16 lg:gap-x-40 lg:gap-y-16  ">
                 <div className="lg:w-[340px]  lg:mb-0">
                   <li className="text-secondary h-[70px] md:h-[165px] lg:h-[165px] list-disc font-bold text-[32px] md:text-[39px] lg:text-[39px] ">
-                    UI/UX Design
+                    {services.content[0].title}
                   </li>
                   <p className="text-[16px] md:text-[20px] lg:text-[20px] text-white">
-                    Our team of highly skilled designers and developers bring
-                    together the art of aesthetics and the science of
-                    functionality to ensure your software stands out from the
-                    crowd.
+                    {services.content[0].description}
                   </p>
                 </div>
                 <div className="lg:w-[340px]  ">
                   <li className="text-secondary h-[115px] md:h-[165px] lg:h-[165px] font-bold  sm:list-disc text-[32px] md:text-[39px] lg:text-[39px] ">
-                    Application Development
+                    {services.content[1].title}
                   </li>
                   <p className="text-[16px] md:text-[20px] lg:text-[20px] text-white">
-                    With 5+ years of experience in the field, we have a team of
-                    talented developers who specialize in creating functional
-                    and user-friendly apps for both Android and iOS platforms.
-                    Our goal is to provide you with a high-quality app that not
-                    only meets your business needs but also exceeds your
-                    expectations.
+                    {services.content[1].description}
                   </p>
                 </div>
                 <div className="lg:w-[340px]  lg:mb-0">
                   <li className="text-secondary h-[70px] md:h-[165px] lg:h-[165px] font-bold list-disc text-[32px] md:text-[39px] lg:text-[39px] ">
-                    Web Development
+                    {services.content[2].title}
                   </li>
                   <ol className="list-decimal text-white text-[16px] md:text-[20px] lg:text-[20px]">
-                    <li>Web Design</li>
-                    <li>Custom Web Development</li>
-                    <li>Mobile Optimization</li>
-                    <li>Content Management</li>
-                    <li>E-Commerce solutions</li>
-                    <li>Website Maintenance and Support</li>
+                    {services.content[2].description.map(
+                      (item: any, index: any) => (
+                        <li key={index}>{item}</li>
+                      )
+                    )}
                   </ol>
                 </div>
                 <div className="lg:w-[400px]  ">
                   <li className="text-secondary h-[115px] md:h-[165px] lg:h-[165px] text-[32px] md:text-[39px] lg:text-[39px] font-bold list-disc">
-                    Staff Augmentation
+                    {services.content[3].title}
                   </li>
                   <div>
                     <p className="text-[#fff] text-[20px] pb-3">
-                      Benefits of our Staff Augmentation Software:
+                      {services.content[3].description}
                     </p>
-                    <ol className="list-decimal text-[16px] md:text-[20px] lg:text-[20px] text-white">
-                      <li>Streamline communication</li>
-                      <li>Encourages constructive discussions</li>
-                      <li>Maintains respectful environment</li>
-                      <li>Efficient conflict resolution</li>
-                      <li>Remote-work friendly</li>
-                    </ol>
                   </div>
                 </div>
                 <div className="lg:w-[340px] ">
                   <li className="text-secondary h-[70px] md:h-[165px] lg:h-[165px] font-bold list-disc text-[32px] md:text-[39px] lg:text-[39px] ">
-                    Digital Marketing
+                    {services.content[4].title}
                   </li>
                   <ol className="list-decimal text-white text-[16px] md:text-[20px] lg:text-[20px]">
-                    <li>Search Engine Optimization</li>
-                    <li>Pay-Per-Click Advertising</li>
-                    <li>Content & Social Media Marketing</li>
-                    <li>Conversion Rate Optimization</li>
-                    <li>Online Reputation Management</li>
+                    {services.content[4].description.map(
+                      (item: any, index: any) => (
+                        <li key={index}>{item}</li>
+                      )
+                    )}
                   </ol>
                 </div>
               </div>
