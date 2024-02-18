@@ -75,8 +75,8 @@ const Header = () => {
           <div className="flex flex-col lg:items-end items-center space-y-2">
             {/* Use dropdown links from JSON */}
             {jsonData.header.navigation.map((item, index) => (
-              <a key={index} href={item.link} className="text-primary text-[55px]">
-                {item.label}
+              <a key={index} onClick={handleClick} href={item.link} className="text-primary text-[55px]">
+                {item.label} 
               </a>
             ))}
             <a href="#contact">
