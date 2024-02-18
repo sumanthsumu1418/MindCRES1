@@ -16,14 +16,13 @@ const Hero: React.FC = () => {
       >
         <div className="flex container h-[100%] mx-auto lg:w-[44%] lg:w-[60%] w-[75%] flex-col justify-evenly items-start ">
           <div className="flex flex-col ">
-            <h1 className="text-secondary text-[36px] md:text-[49px] lg:text-[49px] leading-[1.3] font-bold">
-            {jsonData.hero.title}
-
+            <h1 className="text-secondary w-[644px] text-[36px] md:text-[49px] lg:text-[49px] leading-[1.3] font-bold">
+              {jsonData.hero.title}
             </h1>
           </div>
           <div className="flex lg:flex-row md:flex-row flex-col mt-[-13%] sm:mt-[-9%] lg:items-center w-[100%] justify-between">
-            <p className="text-white lg:text-[39px] text-base text-[29px] ">
-            {jsonData.hero.subtitle}
+            <p className="text-white lg:text-[39px]  text-[29px] ">
+              {jsonData.hero.subtitle}
             </p>
 
             <a href="#contact">
