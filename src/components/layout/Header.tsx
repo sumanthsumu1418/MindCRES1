@@ -3,7 +3,7 @@ import Button from "../common/Button/Button";
 import { icons } from "../constants/assets";
 import jsonData from "../../data/data.json";
 
-const Header = () => {
+const Header = ({mindCresContent}:any) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,6 +13,9 @@ const Header = () => {
     // Close the menu when a navigation link is clicked
     setMenuOpen(false);
   };
+
+
+  const headerData = mindCresContent.header || jsonData.header
 
   return (
     <header className="fixed top-0 h-[100%] w-[100%] md:w-[100%] lg:w-[100%]  h-[125px] md:h-[162px] lg:h-[182px]   flex items-center bg-white z-[99] ">
@@ -53,7 +56,7 @@ const Header = () => {
         {/* Navigation items for larger screens */}
         <div className="hidden md:flex lg:flex lg:justify-between lg:w-[35%]  top-0 items-center lg:space-x-4 space-x-[60px] ">
           {/* Use navigation links from JSON */}
-          {jsonData.header.navigation.map((item, index) => (
+          {headerData.navigation.map((item:any, index:any) => (
             <a key={index} href={item.link} className="text-primary text-[25px]">
               {item.label}
             </a>
@@ -63,7 +66,7 @@ const Header = () => {
               onClick={handleClick}
               className="button_hover bg-primary scroll-smooth focus:scroll-auto scroll-my-2  text-[21px]"
             >
-              {jsonData.header.navigationBtn[0].label}
+              {headerData.navigationBtn[0].label}
             </Button>
           </a>
         </div>
@@ -74,9 +77,9 @@ const Header = () => {
         <div className="md:hidden top-0 h-[100%] flex justify-center items-center  lg:hidden fixed  left-0 w-full bg-white p-4 z-1">
           <div className="flex flex-col lg:items-end items-center space-y-2">
             {/* Use dropdown links from JSON */}
-            {jsonData.header.navigation.map((item, index) => (
-              <a key={index} onClick={handleClick} href={item.link} className="text-primary text-[55px]">
-                {item.label} 
+            {headerData.navigation.map((item:any, index:any) => (
+              <a key={index} href={item.link} className="text-primary text-[55px]">
+                {item.label}
               </a>
             ))}
             <a href="#contact">
@@ -84,7 +87,7 @@ const Header = () => {
                 className="button_hover mt-[45px] scroll-smooth focus:scroll-auto text-[12px] px-4 scale-[3]"
                 onClick={handleClick}
               >
-              {jsonData.header.navigationBtn[0].label}
+              {headerData.navigationBtn[0].label}
               </Button>
             </a>
           </div>

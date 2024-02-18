@@ -24,19 +24,17 @@ import { error } from "console";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-const App: React.FC = ({mindCresContent}) => { // Import the 'remote-config' module from the 'firebase/app' package
+const App: React.FC = ({mindCresContent}:any) => { // Import the 'remote-config' module from the 'firebase/app' package
 
 console.log(mindCresContent)
-
-
 
 
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <ToastContainer />
-        <Header />
-        <Hero />
+        <Header mindCresContent={mindCresContent} />
+        <Hero  />
         <AboutUs />
         <WhyChooseUs />
         <Services />
