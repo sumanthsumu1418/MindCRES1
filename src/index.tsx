@@ -61,7 +61,7 @@ function Index() {
         // Handle error fetching remote config
       }
       const value = getValue(remoteConfig, "mindcresContent");
-
+//@ts-ignore
       setMindCresContent(JSON.parse(value._value));
     };
 
