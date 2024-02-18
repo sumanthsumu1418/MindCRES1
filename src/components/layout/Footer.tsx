@@ -2,14 +2,15 @@ import React from "react";
 import { icons } from "../constants/assets";
 import jsonData from "../../data/data.json"; 
 
-const Footer: React.FC = () => {
+const Footer = ({mindCresContent}:any) => {
+  const footer = mindCresContent.footer || jsonData.footer;
 
   return (
     <footer className="bg-primary">
       <div className="container h-[180px] md:h-[300px] lg:h-[300px] h-[240px] flex  ">
         <div className="flex w-[100%] flex-row items-center justify-between  ">
           <h3 className="text-secondary w-[40%] text-23px md:text-[31px] lg:text-[31px]">
-            {jsonData.footer.content}
+            {footer.content}
           </h3>
 
           <img

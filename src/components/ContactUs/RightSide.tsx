@@ -28,8 +28,8 @@ interface ContactInfo {
   };
 }
 
-const RightSide: React.FC = () => {
-  const contactInfo: ContactInfo = jsonData.contactUs.rightSide || {};
+const RightSide = ({contactUs}:any) => {
+  const contactInfo: ContactInfo = contactUs.rightSide ;
 
   return (
     <>

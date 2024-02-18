@@ -73,7 +73,10 @@ function Index() {
       {mindCresContent ? (
         <App mindCresContent={mindCresContent} />
       ) : (
-        <div>Loading...</div>
+        <div className="flex items-center justify-center h-screen">
+        <div style={{borderColor:"#fdc103"}} className="border-t-8 border-#fdc103 border-solid rounded-full animate-spin w-16 h-16"></div>
+        {/* <p className="ml-4 text-lg font-semibold text-#6B7280">Loading...</p> */}
+      </div>
       )}
     </>
   );

@@ -16,7 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 // Import the functions you need from the SDKs you need
 
-import { error } from "console";
+// import { error } from "console";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -24,7 +24,7 @@ import { error } from "console";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-const App: React.FC = ({mindCresContent}:any) => { // Import the 'remote-config' module from the 'firebase/app' package
+const App = ({mindCresContent}:any) => { // Import the 'remote-config' module from the 'firebase/app' package
 
 console.log(mindCresContent)
 
@@ -34,12 +34,12 @@ console.log(mindCresContent)
       <PersistGate loading={null} persistor={persistor}>
         <ToastContainer />
         <Header mindCresContent={mindCresContent} />
-        <Hero  />
-        <AboutUs />
-        <WhyChooseUs />
+        <Hero mindCresContent={mindCresContent} />
+        <AboutUs  mindCresContent={mindCresContent}/>
+        <WhyChooseUs mindCresContent={mindCresContent} />
         <Services />
-        <ContactUs />
-        <Footer />
+        <ContactUs mindCresContent={mindCresContent} />
+        <Footer mindCresContent={mindCresContent} />
       </PersistGate>
     </Provider>
   );

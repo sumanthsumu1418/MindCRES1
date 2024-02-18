@@ -3,7 +3,7 @@ import { icons } from "./constants/assets";
 import { bgImages } from "./constants/assets";
 import jsonData from "../data/data.json";
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ({mindCresContent}:any) => {
   const iconArray = [
     { icon: icons.expertiseIcon },
     { icon: icons.clientIcon },
@@ -12,7 +12,7 @@ const WhyChooseUs = () => {
     { icon: icons.moneyIcon },
     { icon: icons.supportIcon },
   ];
-  const {title,  services } = jsonData.whyChooseUs;
+  const {title,  services } = mindCresContent.whyChooseUs || jsonData.whyChooseUs;
 
   return (
     <div
@@ -23,7 +23,7 @@ const WhyChooseUs = () => {
       {title}
       </h1>
       <div className="m-auto w-[100%] lg:pb-56 pb-20 container grid grid_sm grid_md grid-cols-3 gap-x-12 gap-y-4 md:gap-x-0 md:gap-y-24  lg:gap-x-16 lg:gap-y-40 ">
-        {services.map((service, index) => (
+        {services.map((service:any, index:any) => (
           <div key={index} className="flex flex-col items-center">
             <span className="rounded-full flex justify-center w-[160px] h-[160px] md:w-[228px] md:h-[228px] scale-[0.6] md:scale-[1] lg:scale-[1]   lg:w-[228px] lg:h-[228px]  bg-primary  ">
               <img

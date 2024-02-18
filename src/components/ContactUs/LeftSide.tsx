@@ -6,7 +6,6 @@ import { resetFormData, setFormData } from "../../Redux/Action/contactUsActions"
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import jsonData from "../../data/data.json";
 
 interface FormInput {
   name: string;
@@ -14,7 +13,7 @@ interface FormInput {
   message: string;
 }
 
-const LeftSide: React.FC = () => {
+const LeftSide= ({contactUs}:any) => {
   const dispatch = useDispatch();
   const {
     control,
@@ -22,7 +21,7 @@ const LeftSide: React.FC = () => {
     setValue,
     formState: { errors },
   } = useForm<FormInput>();
-  const { introText, formFields, submitButtonLabel } = jsonData.contactUs.leftSide;
+  const { introText, formFields, submitButtonLabel } = contactUs.leftSide;
 
   const onSubmit = async (data: FormInput) => {
     try {
