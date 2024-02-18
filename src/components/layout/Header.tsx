@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 h-[100%] w-[100%] md:w-[100%] lg:w-[100%]  h-[135px] lg:h-[182px] mx-1 md:mx-0 lg:mx-0 flex items-center bg-white z-[99] ">
+    <header className="fixed top-0 h-[100%] w-[100%] md:w-[100%] lg:w-[100%]  h-[135px] lg:h-[182px]   flex items-center bg-white z-[99] ">
       <nav className="flex container  h-[100%] items-center justify-between">
         <div className="">
           <a href="/">

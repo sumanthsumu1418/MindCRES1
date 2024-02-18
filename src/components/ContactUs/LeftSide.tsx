@@ -130,7 +130,7 @@ const LeftSide: React.FC = () => {
           </div>
 
           <div className="flex justify-end">
-            <Button className="button_shadow " type="submit">
+            <Button className="button_shadow   " type="submit">
               Submit
             </Button>
           </div>
