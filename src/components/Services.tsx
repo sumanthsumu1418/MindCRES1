@@ -1,5 +1,6 @@
 import React from "react";
 import { bgImages } from "./constants/assets";
+import jsonData from "../data/data.json";
 
 const Services: React.FC = () => {
   return (

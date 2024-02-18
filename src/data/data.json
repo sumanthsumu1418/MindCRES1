@@ -1,0 +1,89 @@
+{
+  "header": {
+    "navigation": [
+      {
+        "label": "About",
+        "link": "#about"
+      },
+      {
+        "label": "Services",
+        "link": "#services"
+      }
+    ],
+    "navigationBtn": [
+      {
+        "label": "Contact us",
+        "link": "#contact"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Welcome to Mindcres Technologies",
+    "subtitle": "Innovate the Future",
+    "buttonText": "Let's connect"
+  },
+  "aboutUs": {
+    "sectionId": "about",
+    "title": "About Us",
+    "content": "At Mindcres Technologies, we are a leading provider of professional software development services. With 5+ years of experience in the industry, we have established ourselves as a reliable and trusted partner for businesses of all sizes. Our team of highly skilled and experienced developers is dedicated to delivering quality software solutions that meet our clients' unique requirements. We specialize in developing custom software applications, web and mobile applications, and software integrations."
+  },
+  "whyChooseUs": {
+    "title": "Why choose us?",
+    "services": [
+      { "text": "Expertise" },
+      { "text": "Client-centric" },
+      { "text": "Quality Assurance" },
+      { "text": "Timely Delivery" },
+      { "text": "Costly Effective" },
+      { "text": "Post-Development Support" }
+    ]
+  },
+  "contactUs": {
+    "sectionId": "contact",
+    "title": "Get in touch",
+    "leftSide": {
+      "introText": "Contact us today to discuss your digital transformation goals and let us help you grow your business.",
+      "formFields": [
+        {
+          "label": "name",
+          "placeholder": "Name",
+          "type": "text"
+        },
+        {
+          "label": "email",
+          "placeholder": "Email Address",
+          "type": "email"
+        },
+        {
+          "label": "message",
+          "placeholder": "Message"
+        }
+      ],
+      "submitButtonLabel": "Submit"
+    },
+    "rightSide": {
+      "visit": {
+        "heading": "Visit Us",
+        "address": "4-91/1, Penamaluru Vijayawada, Krishna district, Andhra Pradesh, 521137, India."
+      },
+      "email": {
+        "heading": "Email Us",
+        "address": "sample@example.com"
+      },
+      "call": {
+        "heading": "Call Us",
+        "phoneNumber": "+ 91 7901054999"
+      },
+      "follow": {
+        "heading": "Follow Us",
+        "socialMedia": {
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/company/viaticum-in/"
+        }
+      }
+    }
+  },
+  "footer": {
+    "content": "From concept to code, let's bring your code to life."
+  }
+}

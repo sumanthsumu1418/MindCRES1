@@ -2,10 +2,11 @@ import { useForm, Controller } from "react-hook-form";
 import React from "react";
 import Button from "../common/Button/Button";
 import { useDispatch } from "react-redux";
-import { setFormData } from "../../Redux/Action/contactUsActions";
+import { resetFormData, setFormData } from "../../Redux/Action/contactUsActions";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import jsonData from "../../data/data.json";
 
 interface FormInput {
   name: string;
@@ -18,9 +19,11 @@ const LeftSide: React.FC = () => {
   const {
     control,
     handleSubmit,
-    reset,
+    setValue,
     formState: { errors },
   } = useForm<FormInput>();
+  const { introText, formFields, submitButtonLabel } = jsonData.contactUs.leftSide;
+
   const onSubmit = async (data: FormInput) => {
     try {
       const serviceId = "service_l73dm23";
@@ -37,28 +40,28 @@ const LeftSide: React.FC = () => {
 
       dispatch(setFormData(data));
 
-      //   console.log("submitted:", data);
-
       // Show success toast
       toast.success("Submitted successfully!");
 
-      // Delay the form reset by a short time (e.g., 500 milliseconds)
-      setTimeout(() => {
-        // Reset the form using the reset method from useForm
-        reset();
-      }, 500);
+      // Manually reset form values
+      setValue("name", "");
+      setValue("email", "");
+      setValue("message", "");
+
+      dispatch(resetFormData()); // Dispatch the resetFormData action
+
+      console.log("Form reset");
     } catch (error) {
-      //   console.error("Error sending email:", error);
       // Show error toast if sending email fails
       toast.error("Error sending email. Please try again.");
     }
   };
 
+
   return (
     <div className="pt-12 ml-2 md:ml-12 lg:ml-8 md:pt-10 lg:pt-8 flex w-[100%] md:w-[110%] lg:w-[110%] flex-col">
       <p className="text-icongold text-[18px] md:text-[25px] lg:text-[25px]  pb-4 ">
-        Contact us today to discuss your digital transformation goals and let us
-        help you grow your business.
+      {introText}
       </p>
 
       <div className="max-w-[95%] md:max-w-md lg:max-w-md mt-8 bg-white">
@@ -71,9 +74,9 @@ const LeftSide: React.FC = () => {
             <Controller
               render={({ field }) => (
                 <input
-                  type="text"
-                  id="name"
-                  placeholder="Name"
+                type={formFields[0].type}
+                id={formFields[0].label}
+                  placeholder={formFields[0].placeholder}
                   {...field}
                   className={`mt-1 md:mt-1 lg:mt-1 px-6 py-1 md:px-6 md:py-2 lg:px-6 lg:py-2 text-[19px] md:text-[25px] lg:text-[25px] border-[1.5px] md:border-[3px] lg:border-[3px] border-[#B0B0B0] h-[60px] w-full rounded-full ${
                     errors.name && "border-red-500"
@@ -91,9 +94,9 @@ const LeftSide: React.FC = () => {
             <Controller
               render={({ field }) => (
                 <input
-                  type="email"
-                  id="email"
-                  placeholder="Email Address"
+                  type={formFields[1].type}
+                  id={formFields[1].label}
+                  placeholder={formFields[1].placeholder}
                   {...field}
                   className={`mt-1 px-6 py-1 md:px-6 md:py-2 lg:px-6 lg:py-2 text-[19px] w-full h-[60px] border-[1.5px] md:border-[3px] lg:border-[3px] border-[#B0B0B0] rounded-full ${
                     errors.email && "border-red-500"
@@ -114,8 +117,8 @@ const LeftSide: React.FC = () => {
             <Controller
               render={({ field }) => (
                 <textarea
-                  id="message"
-                  placeholder="Message"
+                  id={formFields[2].label}
+                  placeholder={formFields[2].placeholder}
                   {...field}
                   rows={4}
                   className={`mt-1 px-6 py-1 md:px-6 md:py-2 lg:px-6 lg:py-2 text-[19px]  border-[1.5px] md:border-[3px] lg:border-[3px] border-[#B0B0B0] h-[126px] md:h-[276px] lg:h-[276px] w-full resize-none rounded-xl ${
@@ -131,7 +134,7 @@ const LeftSide: React.FC = () => {
 
           <div className="flex justify-end">
             <Button className="button_shadow   " type="submit">
-              Submit
+            {submitButtonLabel}
             </Button>
           </div>
         </form>

@@ -1,6 +1,7 @@
 import React from "react";
 import { bgImages } from "./constants/assets";
 import Button from "./common/Button/Button";
+import jsonData from "../data/data.json";
 
 const Hero: React.FC = () => {
   function handleClick() {
@@ -16,19 +17,19 @@ const Hero: React.FC = () => {
         <div className="flex container h-[100%] mx-auto lg:w-[44%] lg:w-[60%] w-[75%] flex-col justify-evenly items-start ">
           <div className="flex flex-col ">
             <h1 className="text-secondary text-[36px] md:text-[49px] lg:text-[49px] leading-[1.3] font-bold">
-              Welcome to
-              <br /> Mindcres Technologies
+            {jsonData.hero.title}
+
             </h1>
           </div>
           <div className="flex lg:flex-row md:flex-row flex-col mt-[-13%] sm:mt-[-9%] lg:items-center w-[100%] justify-between">
             <p className="text-white lg:text-[39px] text-base text-[29px] ">
-              Innovate the Future
+            {jsonData.hero.subtitle}
             </p>
 
             <a href="#contact">
               <Button
                 onClick={handleClick}
-                children="Let's connect"
+                children={jsonData.hero.buttonText}
                 className=" button_no_hover text-[16px] md:text-[20px] lg:text-[20px] px-6 py-1 lg:py-0  lg:px-0 scale-[1] mt-8 md:mt-0 lg:mt-0"
               />
             </a>
