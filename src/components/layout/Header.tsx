@@ -5,15 +5,12 @@ import { icons } from "../constants/assets";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleClick = () => {
-    console.log("Button clicked");
-  };
-  // const handleClose = () => {
-  //   console.log("Button closed");
-  // };
-
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+  const handleClick = () => {
+    // Close the menu when a navigation link is clicked
+    setMenuOpen(false);
   };
 
   return (
@@ -67,8 +64,8 @@ const Header = () => {
           </a>
           <a href="#contact">
             <Button
+              onClick={handleClick}
               className="button_hover bg-primary scroll-smooth focus:scroll-auto scroll-my-2  text-[21px]"
-              onClick={handleClick} 
             >
               Contact Us
             </Button>
@@ -82,13 +79,15 @@ const Header = () => {
           <div className="flex flex-col lg:items-end items-center space-y-2">
             <a
               href="#about"
-              className="text-primary scroll-smooth focus:scroll-auto text-[55px]"
+              className="text-primary scroll-smooth focus:scroll-auto text-[55px] "
+              onClick={handleClick}
             >
               About
             </a>
             <a
               href="#services"
               className="text-primary  scroll-smooth focus:scroll-auto text-[55px] "
+              onClick={handleClick}
             >
               Services
             </a>
