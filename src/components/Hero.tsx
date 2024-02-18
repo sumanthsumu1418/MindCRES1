@@ -8,51 +8,34 @@ const Hero: React.FC = () => {
   }
 
   return (
-<<<<<<< Updated upstream
     <>
-
-    <div className="h-[40vh] relative flex flex-col items-center bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: `url(${bgImages.hero_bg})` }}>
-  <div className="flex container flex-col justify-evenly items-center sm:flex-row">
-    <div className="flex flex-col ">
-      <h1 className="text-secondary text-3xl sm:text-5xl line-height font-bold">
-        Welcome to
-        <br /> Mindcres Technologies
-      </h1>
-
-      <p className="text-white text-base sm:text-[19px] pt-6">
-        Innovate the Future
-      </p>
-=======
-    <div className="container">
       <div
-        className=" h-[40vh] flex flex-row items-center justify-around  relative"
+        className="lg:h-[500px] md:h-[410px] h-[450px] lg:mt-[182px]  md:mt-[135px] mt-[135px] relative flex  flex-col items-center bg-cover bg-center bg-no-repeat relative"
         style={{ backgroundImage: `url(${bgImages.hero_bg})` }}
       >
-        <div className="flex justify-around">
-          <h1 className="text-secondary font-[4rem] font-bold">
-            Welcome to
-            <br /> Mindcres Technologies
-          </h1>
+        <div className="flex container h-[100%] mx-auto lg:w-[44%] lg:w-[60%] w-[75%] flex-col justify-evenly items-start ">
+          <div className="flex flex-col ">
+            <h1 className="text-secondary text-[36px] md:text-[49px] lg:text-[49px] leading-[1.3] font-bold">
+              Welcome to
+              <br /> Mindcres Technologies
+            </h1>
+          </div>
+          <div className="flex lg:flex-row md:flex-row flex-col mt-[-13%] sm:mt-[-9%] lg:items-center w-[100%] justify-between">
+            <p className="text-white lg:text-[39px] text-base text-[29px] ">
+              Innovate the Future
+            </p>
 
-          <p className="text-white font-[39px]">Innovate the Future</p>
-        </div>
-        <div className="">
-          <Button
-            onClick={handleClick}
-            children="Lets connect"
-            className="button_no_hover"
-          />
+            <a href="#contact">
+              <Button
+                onClick={handleClick}
+                children="Let's connect"
+                className=" button_no_hover text-[16px] md:text-[20px] lg:text-[20px] px-6 py-1 lg:py-0  lg:px-0 scale-[1] mt-8 md:mt-0 lg:mt-0"
+              />
+            </a>
+          </div>
         </div>
       </div>
->>>>>>> Stashed changes
-    </div>
-
-    <div className="flex flex-col mt-6 sm:mt-0">
-      <Button onClick={handleClick} children="Let's connect" className="button_no_hover" />
-    </div>
-  </div>
-</div>
-</>
+    </>
   );
 };
 
