@@ -38,6 +38,58 @@
       { "text": "Post-Development Support" }
     ]
   },
+  "services": {
+    "sectionId": "services",
+    "title": "Our Services",
+    "content": [
+      {
+        "title": "UI/UX Design",
+        "description": [
+          "Our team of highly skilled designers and developers bring together the art of aesthetics and the science of functionality.",
+          "Ensure your software stands out from the crowd."
+        ]
+      },
+      {
+        "title": "Application Development",
+        "description": [
+          "With 5+ years of experience, our talented developers specialize in creating functional and user-friendly apps.",
+          "Goal: Provide a high-quality app that exceeds your expectations."
+        ]
+      },
+      {
+        "title": "Web Development",
+        "description": [
+          "Web Design:",
+          "  - Creative and effective web design services.",
+          "Custom Web Development:",
+          "  - Tailored solutions to meet your specific business requirements and goals.",
+          "Mobile Optimization, Content Management, E-Commerce solutions, Website Maintenance and Support."
+        ]
+      },
+      {
+        "title": "Staff Augmentation",
+        "description": [
+          "Benefits of our Staff Augmentation Software:",
+          "  - Streamline communication",
+          "  - Encourages constructive discussions",
+          "  - Maintains respectful environment",
+          "  - Efficient conflict resolution",
+          "  - Remote-work friendly"
+        ]
+      },
+      {
+        "title": "Digital Marketing",
+        "description": [
+          "Services:",
+          "  - Search Engine Optimization",
+          "  - Pay-Per-Click Advertising",
+          "  - Content & Social Media Marketing",
+          "  - Conversion Rate Optimization",
+          "  - Online Reputation Management"
+        ]
+      }
+    ]
+  },
   "contactUs": {
     "sectionId": "contact",
     "title": "Get in touch",
