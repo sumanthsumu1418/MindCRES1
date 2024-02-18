@@ -28,7 +28,7 @@ const AboutUs = () => {
           </p>
 
           <img
-            className="h-[392px] mt-10 md:mt-4  lg:mr-4  bg-center bg-no-repeat relative  bg-cover"
+            className="lg:h-[392px] mt-10 md:mt-4 h-auto  lg:mr-4  bg-center bg-no-repeat relative  bg-cover"
             src={bgImages.aboutImage}
             alt="about"
           />
